@@ -11,4 +11,5 @@ Trabalho final da disciplina de Data Warehouse - UFSC2019
 ## Backend
 [Spoon v8.2](https://sourceforge.net/projects/pentaho/)
 
-## As issues estão definidas no github
+## Esquema Estrela
+[Aqui](https://drive.google.com/file/d/1oWNWa6pfuahGOFNG58gwN4ttlr7sNXjY/view)
