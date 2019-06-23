@@ -3,13 +3,13 @@ Trabalho final da disciplina de Data Warehouse - UFSC2019
 
 ## Tema
 > 4. Análise quanto a moradia para apoiar análises da PRAE (moradia estudantil) e setor imobiliário da grande Florianópolis.  
-> * Alunos aprovados agrupados por cidade e renda a fim de saber o poder aquisitivo do candidato.
-> * Alunos com baixa renda são aptos a moradia estudantil (PRAE)
-> * Alunos com renda são aptos a alugar ou comprar imóvel
-> * Agrupar por ano/vestibular, para saber estatisticamente o numero de candidatos aptos ao mercado imobiliario ou PRAE
+> * Qual a faixa de poder aquisitivo dos candidatos por cidade, que foram aprovados no vestibular ?
+> * Quais candidatos de baixa renda estão aptos a solicitar moradia estudantil para PRAE?
+> * Quais candidatos possuem capacidade financeira para alugar ou comprar imóvel na grande Florianópolis?
+> * Existe uma relação de candidatos por ano ou vestibular aptos ao mercado imobiliário ou a PRAE?
 
 ## Backend
 [Spoon v8.2](https://sourceforge.net/projects/pentaho/)
 
 ## Esquema Estrela
-[Aqui](https://drive.google.com/file/d/1oWNWa6pfuahGOFNG58gwN4ttlr7sNXjY/view)
+[Aqui](https://drive.google.com/file/d/1syb17oWjSNZI0rZ_21DsG6HKf1N5IoAm/view)
