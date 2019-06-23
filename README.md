@@ -13,3 +13,6 @@ Trabalho final da disciplina de Data Warehouse - UFSC2019
 
 ## Esquema Estrela
 [Aqui](https://drive.google.com/file/d/1syb17oWjSNZI0rZ_21DsG6HKf1N5IoAm/view)
+
+## Front View
+[Aqui](https://app.powerbi.com/view?r=eyJrIjoiM2Q3OWUxMTYtOGQyNS00MGE5LWFlNGEtYTBkYjZkOWYzMzBkIiwidCI6IjQzN2ZiNDI5LWVjMzUtNDVjYi05MzhiLTY4MmEyYTM1MWJmYyJ9)
