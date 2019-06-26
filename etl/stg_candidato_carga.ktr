@@ -860,36 +860,37 @@
     </GUI>
   </step>
   <step>
-    <name>candidatos</name>
-    <type>TableInput</type>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>vestibular</connection>
-    <sql>select 
-c.id_evento,
-c.id_candidato,
-upper(c.cidade) as cidade,
-upper(c.unidade_federativa) as uf,
-substring(c.grade_socioeconomico,20,1) as id_renda,
-substring(c.grade_socioeconomico,19,1) as id_pessoasresidencia,
-substring(c.grade_socioeconomico,23,1) as id_pessoafonterenda,
-cr.nome_curso
-from candidato c
-inner join candidato_classificado cc on c.id_candidato = cc.id_candidato
-inner join opcao_candidato oc on oc.id_candidato = c.id_candidato and oc.id_opcao = 1 and oc.id_evento = c.id_evento
-inner join curso cr on oc.codigo_opcao = cr.id_curso and cr.id_evento = oc.id_evento
-where c.por_experiencia like 'N'</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+    <from>dim_cidade</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>cidade</name>
+        <field>nome_cidade</field>
+      </key>
+      <key>
+        <name>UF</name>
+        <field>UF</field>
+      </key>
+      <value>
+        <name>id_cidade</name>
+        <rename>id_dim_cidade</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -899,7 +900,7 @@ where c.por_experiencia like 'N'</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
+      <xloc>448</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -934,6 +935,10 @@ where c.por_experiencia like 'N'</sql>
     <return_field/>
     <fields>
       <field>
+        <column_name>id_vestibular</column_name>
+        <stream_name>id_vestibular</stream_name>
+      </field>
+      <field>
         <column_name>cidade</column_name>
         <stream_name>cidade</stream_name>
       </field>
@@ -946,24 +951,20 @@ where c.por_experiencia like 'N'</sql>
         <stream_name>id_renda</stream_name>
       </field>
       <field>
+        <column_name>id_pessoaresidencia</column_name>
+        <stream_name>id_pessoaresidencia</stream_name>
+      </field>
+      <field>
         <column_name>id_pessoafonterenda</column_name>
         <stream_name>id_pessoafonterenda</stream_name>
       </field>
       <field>
-        <column_name>nome_curso</column_name>
-        <stream_name>nome_curso</stream_name>
+        <column_name>cod_curso</column_name>
+        <stream_name>cod_curso</stream_name>
       </field>
       <field>
         <column_name>id_dim_cidade</column_name>
-        <stream_name>id_cidade</stream_name>
-      </field>
-      <field>
-        <column_name>id_pessoaresidencia</column_name>
-        <stream_name>id_pessoasresidencia</stream_name>
-      </field>
-      <field>
-        <column_name>id_vestibular</column_name>
-        <stream_name>id_evento</stream_name>
+        <stream_name>id_dim_cidade</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -976,6 +977,50 @@ where c.por_experiencia like 'N'</sql>
     </remotesteps>
     <GUI>
       <xloc>640</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>candidatos</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>vestibular</connection>
+    <sql>select 
+c.id_evento as id_vestibular,
+c.id_candidato,
+upper(c.cidade) as cidade,
+upper(c.unidade_federativa) as uf,
+substring(c.grade_socioeconomico,20,1) as id_renda,
+substring(c.grade_socioeconomico,19,1) as id_pessoaresidencia,
+substring(c.grade_socioeconomico,23,1) as id_pessoafonterenda,
+concat(cr.id_evento,cr.id_curso) cod_curso
+from candidato_classificado cc
+inner join candidato c on c.id_candidato = cc.id_candidato and cc.id_evento = c.id_evento
+inner join curso cr on cr.id_curso = cc.codigo_opcao and cr.id_evento = cc.id_evento
+where c.por_experiencia like 'N'</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1013,52 +1058,6 @@ from dim_cidade</sql>
     <GUI>
       <xloc>448</xloc>
       <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Stream lookup</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>dim_cidade</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>cidade</name>
-        <field>nome_cidade</field>
-      </key>
-      <key>
-        <name>UF</name>
-        <field>UF</field>
-      </key>
-      <value>
-        <name>id_cidade</name>
-        <rename>id_cidade</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>448</xloc>
-      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

@@ -637,8 +637,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>BAL</replace_string>
-        <replace_by_string>BALNEARIO</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -649,8 +649,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>JD</replace_string>
-        <replace_by_string>JARDIM</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -661,8 +661,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>J</replace_string>
-        <replace_by_string>JESUS</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -673,8 +673,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>S</replace_string>
-        <replace_by_string>SAO</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -685,8 +685,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>V</replace_string>
-        <replace_by_string>VISTA</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -697,8 +697,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>ALM</replace_string>
-        <replace_by_string>ALMIRANTE</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -709,8 +709,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>D</replace_string>
-        <replace_by_string>DO OESTE</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -721,8 +721,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>DOESTE</replace_string>
-        <replace_by_string>OESTE</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -733,8 +733,20 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>STO</replace_string>
-        <replace_by_string>SANTO</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>cidade</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>PTO</replace_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -832,8 +844,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>BAL</replace_string>
-        <replace_by_string>BALNEARIO</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -844,8 +856,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>JD</replace_string>
-        <replace_by_string>JARDIM</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -856,8 +868,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>J</replace_string>
-        <replace_by_string>JESUS</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -868,8 +880,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>S</replace_string>
-        <replace_by_string>SAO</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -880,8 +892,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>V</replace_string>
-        <replace_by_string>VISTA</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -892,8 +904,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>ALM</replace_string>
-        <replace_by_string>ALMIRANTE</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -916,8 +928,8 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>DOESTE</replace_string>
-        <replace_by_string>OESTE</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -928,8 +940,20 @@
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>STO</replace_string>
-        <replace_by_string>SANTO</replace_by_string>
-        <set_empty_string>N</set_empty_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>nome</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>PTO</replace_string>
+        <replace_by_string/>
+        <set_empty_string>Y</set_empty_string>
         <replace_field_by_string/>
         <whole_word>yes</whole_word>
         <case_sensitive>no</case_sensitive>

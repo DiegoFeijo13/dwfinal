@@ -689,18 +689,16 @@
     </partitioning>
     <connection>dm_vestibular</connection>
     <sql>select 
-cidade,
-id_renda,
+cod_curso,
 id_vestibular as id_evento,
+id_renda,
 id_pessoafonterenda,
 id_pessoaresidencia,
-nome_curso,
-uf,
 id_dim_cidade,
 count(id_candidato) as num_candidatos
 from stg_candidato 
 where id_dim_cidade is not null
-group by id_dim_cidade,id_renda,id_vestibular,id_pessoafonterenda,id_pessoaresidencia
+group by concat(id_dim_cidade,id_renda,id_vestibular,id_pessoafonterenda,id_pessoaresidencia)
 order by id_dim_cidade</sql>
     <limit>0</limit>
     <lookup/>
@@ -733,7 +731,7 @@ order by id_dim_cidade</sql>
       <schema_name/>
     </partitioning>
     <connection>dm_vestibular</connection>
-    <sql>select id_curso,nome from dim_curso</sql>
+    <sql>select id_curso,cod_curso from dim_curso</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1055,8 +1053,8 @@ where numero_questao = 17</sql>
     <integer_pair>N</integer_pair>
     <lookup>
       <key>
-        <name>nome_curso</name>
-        <field>nome</field>
+        <name>cod_curso</name>
+        <field>cod_curso</field>
       </key>
       <value>
         <name>id_curso</name>
