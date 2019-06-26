@@ -12,7 +12,7 @@ Trabalho final da disciplina de Data Warehouse - UFSC2019
 [Spoon v8.2](https://sourceforge.net/projects/pentaho/)
 
 ## Esquema Estrela
-[Aqui](https://drive.google.com/file/d/1syb17oWjSNZI0rZ_21DsG6HKf1N5IoAm/view)
+[Aqui](https://github.com/DiegoFeijo13/dwfinal/blob/master/esquema-estrela.jpg)
 
 ## Front View
 [Aqui](https://app.powerbi.com/view?r=eyJrIjoiY2U5MWJhMmYtYWI1Mi00YjMzLWFiZTgtYzgwZDc5NjFlOTFjIiwidCI6IjQzN2ZiNDI5LWVjMzUtNDVjYi05MzhiLTY4MmEyYTM1MWJmYyJ9)
