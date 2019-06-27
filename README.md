@@ -15,4 +15,4 @@ Trabalho final da disciplina de Data Warehouse - UFSC2019
 [Aqui](https://github.com/DiegoFeijo13/dwfinal/blob/master/esquema-estrela.jpg)
 
 ## Front View
-[Aqui](https://app.powerbi.com/view?r=eyJrIjoiODE4YmYzNGEtNjBjNy00OTJiLThkOTQtNmEwOTFlOGVmMDNiIiwidCI6IjQzN2ZiNDI5LWVjMzUtNDVjYi05MzhiLTY4MmEyYTM1MWJmYyJ9)
+[Aqui](https://app.powerbi.com/view?r=eyJrIjoiN2MwZTBiN2UtN2M2Yi00MmI1LWE3MmMtYTRiNzViNTA2MjZkIiwidCI6IjQzN2ZiNDI5LWVjMzUtNDVjYi05MzhiLTY4MmEyYTM1MWJmYyJ9)
